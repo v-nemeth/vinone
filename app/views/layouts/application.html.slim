@@ -15,8 +15,7 @@ html
 
     link rel="icon" href="/icon.png" type="image/png"
     link rel="icon" href="/icon.svg" type="image/svg+xml"
-    link rel="apple-touch-icon" href="/icon.png"
-
+    link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     / Includes all stylesheet files in app/assets/stylesheets
     = stylesheet_link_tag :app, "data-turbo-track": "reload"
     = javascript_importmap_tags
@@ -25,7 +24,8 @@ html
     input#my-drawer.drawer-toggle type="checkbox"
     main.drawer-content
       header.flex.items-center.gap-2.lg:gap-4.p-4
-        label.btn.btn-square.btn-ghost.drawer-button for="my-drawer" BUTTON
+        label.btn.btn-square.btn-ghost.drawer-button for="my-drawer"
+          i.material-symbols-outlined menu
         .grow              
           h1.lg:text-2xl.lg:font-light Dashboard
 
