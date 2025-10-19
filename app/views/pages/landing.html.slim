@@ -1,3 +1,16 @@
-section.col-span-8.xl:col-start-3.card.bg-base-100
-  .card-body
-    h2 Hello world!
+section.col-span-10.card.bg-base-100.xl:col-start-2
+  .card-body.text-center.text-lg.font-light.flex.lg:flex-row.justify-around.items-center
+    .flex.flex-col.gap-4.max-w-lg
+      p.text-4xl Hi! Welcome to my webpage
+      p.text-lg Here are some links you can click! More will be added later...
+    = image_tag "semiprofile.jpg", class: "rounded-md w-xl"
+.section.col-span-12.card.bg-base-100.rounded-xl
+  .card-body.flex.flex-row.justify-around.min-h-32.items-center.gap-8
+    = link_to "https://github.com/v-nemeth", class: "min-w-16 flex justify-center" do
+      = image_tag "github.svg", class: "h-12 hover:scale-120 transition duration-300 ease-in-out"
+    = link_to "https://www.instagram.com/vnemethh/", class: "min-w-16 flex justify-center" do
+      = image_tag "instagram.svg", class: "h-12 hover:scale-120 transition duration-300 ease-in-out"
+    = link_to "https://www.linkedin.com/in/viktor-andersen-78852217b/", class: "min-w-16 flex justify-center" do
+      = image_tag "linkedin.svg", class: "h-12 hover:scale-120 transition duration-300 ease-in-out"
+    = link_to "https://x.com/Vnemethh", class: "min-w-16 flex justify-center" do
+      = image_tag "twitter.svg", class: "h-12 hover:scale-120 transition duration-300 ease-in-out"

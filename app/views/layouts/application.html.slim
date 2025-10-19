@@ -15,26 +15,33 @@ html
 
     link rel="icon" href="/icon.png" type="image/png"
     link rel="icon" href="/icon.svg" type="image/svg+xml"
-    link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" 
     / Includes all stylesheet files in app/assets/stylesheets
     = stylesheet_link_tag :app, "data-turbo-track": "reload"
     = javascript_importmap_tags
 
-  body.drawer.bg-base-200.lg:drawer-closed.min-h-screen
+  body.drawer.bg-base-200.lg:drawer-closed.min-h-screen.flex.flex-col
     input#my-drawer.drawer-toggle type="checkbox"
-    main.drawer-content
-      header.flex.items-center.gap-2.lg:gap-4.p-4
-        label.btn.btn-square.btn-ghost.drawer-button for="my-drawer"
-          i.material-symbols-outlined menu
-        .grow              
-          h1.lg:text-2xl.lg:font-light Dashboard
-
+    header.flex.items-center.gap-2.lg:gap-4.p-4.bg-neutral.text-white
+      label.btn.btn-circle.btn-neutral.drawer-button for="my-drawer"
+        i.material-symbols-outlined.p-1 menu
+      .flex.justify-between.items-center.w-full
+        .lg:text-2xl.font-bold Viktor Nemeth Andersen
+        .flex.items-center
+          .lg:text-2xl.lg:font-bold Vinone
+          i.material-symbols-outlined.material-icons.md-48.rounded-xl.bg-white/10.mx-2 network_intel_node
+    main.drawer-content.grow-1
       .flex.justify-center
         .grid.xl:grid-cols-12.grid-cols-6.gap-y-12.p-4.xl:gap-x-12.xl:p-10.w-full class="grid-rows-[min-content]"
           = yield
+    footer.footer.flex.justify-center.p-4
+     p Copyright © - All right reserved by Viktor Nemeth Andersen
     aside.drawer-side.z-10
       label.drawer-overlay for="my-drawer"
-      nav.bg-base-100.flex.min-h-screen.w-72.flex-col.gap-2.overflow-y-auto.px-6.py-10
-        .mx-4.flex.items-center.gap-2.font-black My Project
+      nav.bg-base-100.text.flex.min-h-screen.w-72.flex-col.gap-2.overflow-y-auto.px-6.py-10
+        .mx-4.flex.text-center.gap-2.font-black Vinone
         ul.menu.w-full
-          li = link_to :landing_path
+          li = link_to "/" do
+            i.material-symbols-outlined home
+            p Home
+
