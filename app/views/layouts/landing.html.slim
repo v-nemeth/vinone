@@ -21,8 +21,9 @@ html
     = javascript_importmap_tags
 
   body.drawer.bg-base-200.lg:drawer-closed.min-h-screen.flex.flex-col
+    = image_tag "image_3.jpg", class:"z-0 absolute h-full w-full object-cover top-0"
     input#my-drawer.drawer-toggle type="checkbox"
-    header.flex.items-center.gap-2.lg:gap-3.p-4.bg-base-300/20.text-white.sticky.top-0.z-10.backdrop-filter.backdrop-blur-lg.bg-opacity-30.border-gray-200
+    header.border-b.border-base-200/40.flex.items-center.gap-2.lg:gap-3.p-4.bg-base-300/20.text-white.sticky.top-0.z-10.backdrop-filter.backdrop-blur-lg.bg-opacity-30
       label.btn.btn-circle.bg-base-200/80.drawer-button for="my-drawer"
         i.material-symbols-outlined.p-1 menu
       .flex.justify-between.items-center.w-full
@@ -30,11 +31,11 @@ html
         .flex.items-center
           .lg:text-2xl.lg:font-bold Vinone
           i.material-symbols-outlined.material-icons.md-48.rounded-xl.bg-white/10.mx-2 network_intel_node
-    main.drawer-content.grow-1.flex.flex-col
-      .grid.flex.grow-1.xl:grid-cols-12.grid-cols-6.gap-y-12.w-full class="grid-rows-[min-content]"
-        = yield
-      footer.footer.flex.justify-center.p-4
-        p Copyright © - All rights reserved by Viktor Nemeth Andersen
+
+    main.drawer-content.grow-1.z-1.flex.flex-col.justify-end
+      = yield
+    footer.footer.flex.justify-center.p-4.z-10.backdrop-filter.backdrop-blur-lg.bg-opacity-30.border-gray-200
+      p Copyright © - All rights reserved by Viktor Nemeth Andersen
     aside.drawer-side.z-10
       label.drawer-overlay for="my-drawer"
       nav.bg-base-100.text.flex.min-h-screen.w-72.flex-col.gap-2.overflow-y-auto.px-6.py-10
