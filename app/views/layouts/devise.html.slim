@@ -20,6 +20,8 @@ html
     / Includes all stylesheet files in app/assets/stylesheets
     = stylesheet_link_tag :app, "data-turbo-track": "reload"
     = javascript_importmap_tags
+    = favicon_link_tag asset_path('favicon.svg')
+
 
   body.bg-base-200.min-h-screen
     .grid.grid-cols-4.md:grid-cols-8.2xl:grid-cols-12.gap-y-12.p-4.xl:p-10.w-full

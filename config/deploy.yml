@@ -7,7 +7,7 @@ image: nem3th/vinone
 # Deploy to these servers.
 servers:
   web:
-    - cozy-cooking.com
+    - vinone.dk
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -19,7 +19,7 @@ servers:
 # Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full" to enable CF-to-app encryption.
 proxy:
   ssl: true
-  host: cozy-cooking.com
+  host: vinone.dk
   forward_headers: true
 
 
